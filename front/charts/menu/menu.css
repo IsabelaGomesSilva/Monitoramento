@@ -1,0 +1,24 @@
+  header {
+    background-color: #941611;
+    border-bottom: 1px solid #941611;
+    color: white;
+    height: 60px;
+  }
+  header a {
+    color: white;
+    text-decoration: none; 
+    margin-left: 1rem; 
+  }
+  
+  @media (max-width: 768px) {
+  
+    header img {
+      width: 50px;
+      height: auto;
+    }
+  
+    header i {
+      font-size: 1rem;
+    }
+  }
+  

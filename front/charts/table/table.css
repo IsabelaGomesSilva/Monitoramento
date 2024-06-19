@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  iframe[src*="menu.html"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000; 
+  }
+
+.table {
+    
+    font-size: 0.9rem;
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .table-responsive{
+    padding-top: 60px;
+    top: 70px;
+  }
+  .table-responsive thead th {
+    position: sticky;
+    background-color: #fff; 
+  }

@@ -47,6 +47,15 @@ def create_app(config_name):
             query = conn.execute(text('select dispositivo, COUNT(dispositivo) from monitoramento GROUP BY (dispositivo)'))
             result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
             return jsonify(result)
+         
+    @app.route('/graficos/gauge', methods=['GET'])
+    def gauge():
+         if ( request.method == "GET" ):
+            conn = db_connect.connect()
+            query = conn.execute(text('select AVG(temperatura) AS MediaTemperatura, AVG(umidade) AS MediaUmidade, AVG(luminosidade) AS MediaLuminosidade from monitoramento '))
+            result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
+            return jsonify(result)     
+         
         
     
     @app.route('/monitoramento/<int:id>', methods=['GET', 'PUT', 'DELETE'])    

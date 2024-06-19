@@ -1,0 +1,42 @@
+/* Estilização geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilização do iframe do menu */
+iframe[src*="menu.html"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+/* Ajustando a margem superior do conteúdo para não ficar atrás do menu */
+.row {
+  margin-top: 60px; /* Deve ser igual à altura do iframe do menu */
+}
+
+/* Estilização dos iframes de conteúdo */
+.chart-content {
+  width: 98%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.chart-content iframe {
+  width: 95%;
+  height: 400px; /* Altura padrão para os gráficos, ajuste conforme necessário */
+  border: 1px solid #ccc;
+  background-color: #f0f0f0; /* Bege claro */
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Adicionando margem inferior para separar os gráficos */
+.chart-content + .chart-content {
+  margin-top: 20px;
+}
